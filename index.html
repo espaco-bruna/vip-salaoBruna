@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Vip Bruna Cabelos | Salão & Colorimetria em Sertânia - PE</title>
+    <meta name="description" content="Espaço Vip Bruna Cabelos em Sertânia - PE. Especialistas em Morena Iluminada, Loiro Perfeito, Mechas, Cortes, Escovas e Tratamentos Capilares. Agende pelo WhatsApp ou Trinks.">
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial de Luxo) & Plus Jakarta Sans (UI Clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuração de Tema Editorial de Luxo -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0F0E0D',
+                        'obsidian-light': '#1C1A18',
+                        champagne: '#C5A059',
+                        'champagne-light': '#DFC082',
+                        'champagne-dark': '#9E7B38',
+                        bone: '#FAF8F5',
+                        sand: '#F2EDE4',
+                        ink: '#1A1816',
+                        muted: '#666058',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        luxury: '0 20px 50px -12px rgba(15, 14, 13, 0.14)',
+                        gold: '0 10px 25px -5px rgba(197, 160, 89, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Ajustes sutis complementares ao Tailwind */
+        .glass-nav {
+            background: rgba(15, 14, 13, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C5A059 0%, #E8CE96 50%, #B38D46 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #C5A059 0%, #A6823E 100%);
+        }
+
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #D1AE69 0%, #B58F48 100%);
+        }
+
+        .service-card {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        @keyframes pulseSlow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+
+        .pulse-whatsapp {
+            animation: pulseSlow 2.8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-bone text-ink font-sans antialiased selection:bg-champagne selection:text-obsidian">
+
+    <!-- ===================================================================== -->
+    <!-- 1. CABEÇALHO FIXO COM STATUS AUTOMÁTICO DE FUNCIONAMENTO              -->
+    <!-- ===================================================================== -->
+    <header id="top-header" class="glass-nav fixed top-0 left-0 right-0 z-50 border-b border-champagne/20 text-bone transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Marca -->
+                <a href="#hero" class="flex flex-col group">
+                    <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide text-bone group-hover:text-champagne-light transition-colors">
+                        Espaço Vip
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-champagne font-medium -mt-1">
+                        Bruna Cabelos
+                    </span>
+                </a>
+
+                <!-- Indicador de Horário em Tempo Real (Sertânia - PE) -->
+                <div id="status-badge-desktop" class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-obsidian-light border border-champagne/25 text-xs">
+                    <span id="status-dot-desktop" class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span id="status-text-desktop" class="font-medium text-bone/90">Verificando horário...</span>
+                    <span class="text-bone/40">•</span>
+                    <span class="text-champagne-light/80">Sertânia - PE</span>
+                </div>
+
+                <!-- Navegação Desktop -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-bone/85">
+                    <a href="#servicos" class="hover:text-champagne-light transition-colors">Serviços</a>
+                    <a href="#galeria" class="hover:text-champagne-light transition-colors">Transformações</a>
+                    <a href="#sobre" class="hover:text-champagne-light transition-colors">O Espaço</a>
+                    <a href="#localizacao" class="hover:text-champagne-light transition-colors">Localização</a>
+                    <a href="#politicas" class="hover:text-champagne-light transition-colors">Políticas</a>
+                </nav>
+
+                <!-- Botões de Ação + Menu Mobile -->
+                <div class="flex items-center gap-2.5">
+                    <a href="https://www.trinks.com" target="_blank" rel="noopener noreferrer"
+                       class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-champagne/40 hover:border-champagne text-xs font-medium text-champagne-light hover:text-white transition-all">
+                        <i class="far fa-calendar-check"></i>
+                        <span>Agenda Trinks</span>
+                    </a>
+
+                    <a href="https://wa.me/5587998167458?text=Ol%C3%A1%20Bruna!%20Vi%20o%20site%20do%20Espa%C3%A7o%20Vip%20Bruna%20Cabelos%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 gold-btn text-obsidian font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-full shadow-gold transition-all">
+                        <i class="fab fa-whatsapp text-base"></i>
+                        <span>Agendar</span>
+                    </a>
+
+                    <button id="mobile-menu-btn" type="button" aria-label="Abrir menu"
+                            class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-bone hover:bg-white/10 transition-colors">
+                        <i id="mobile-menu-icon" class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sub-barra Mobile com Status em Tempo Real -->
+            <div class="xl:hidden pb-2.5 flex items-center justify-between text-[11px] border-t border-white/10 pt-2">
+                <div class="flex items-center gap-2">
+                    <span id="status-dot-mobile" class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span id="status-text-mobile" class="text-bone/85 font-medium">Verificando horário...</span>
+                </div>
+                <span class="text-champagne-light/80">Ter–Sex 09h–18h • Sáb 09h–19h</span>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-light border-t border-champagne/20 px-4 py-5 space-y-3">
+            <a href="#servicos" class="mobile-nav-link block py-2 px-3 rounded-lg text-bone/90 hover:bg-white/5 hover:text-champagne-light">Serviços e Preços</a>
+            <a href="#galeria" class="mobile-nav-link block py-2 px-3 rounded-lg text-bone/90 hover:bg-white/5 hover:text-champagne-light">Galeria de Transformações</a>
+            <a href="#sobre" class="mobile-nav-link block py-2 px-3 rounded-lg text-bone/90 hover:bg-white/5 hover:text-champagne-light">Sobre o Espaço Vip</a>
+            <a href="#localizacao" class="mobile-nav-link block py-2 px-3 rounded-lg text-bone/90 hover:bg-white/5 hover:text-champagne-light">Localização e Horários</a>
+            <a href="#politicas" class="mobile-nav-link block py-2 px-3 rounded-lg text-bone/90 hover:bg-white/5 hover:text-champagne-light">Pagamentos e Cancelamento</a>
+            <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+                <a href="https://www.trinks.com" target="_blank" rel="noopener noreferrer"
+                   class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-champagne/40 text-champagne-light text-sm font-medium">
+                    <i class="far fa-calendar-check"></i>
+                    <span>Agendar no Trinks</span>
+                </a>
+                <a href="https://wa.me/5587998167458?text=Ol%C3%A1%20Bruna!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Espa%C3%A7o%20Vip."
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl gold-btn text-obsidian text-sm font-semibold">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp (87) 99816-7458</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO PRINCIPAL                                                     -->
+    <!-- ===================================================================== -->
+    <section id="hero" class="relative min-h-[92vh] flex items-center pt-28 pb-16 bg-obsidian text-bone overflow-hidden">
+        <!-- Fundo Decorativo Editorial com Camada Escura para Máximo Contraste -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80"
+                 alt="Ambiente sofisticado de salão de beleza e cuidados capilares"
+                 onerror="this.src='https://placehold.co/1920x1080/1C1A18/C5A059?text=Espaco+Vip+Bruna+Cabelos'"
+                 class="w-full h-full object-cover object-center opacity-35 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/90 to-obsidian/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Coluna Esquerda: Mensagem Principal -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian-light/90 border border-champagne/35 text-champagne-light text-xs font-medium tracking-wider uppercase">
+                        <i class="fas fa-sparkles text-champagne"></i>
+                        <span>Centro • Sertânia - PE</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-semibold leading-[1.08] tracking-tight text-bone">
+                        Transforme seu Estilo, <span class="gold-gradient-text italic font-medium">Transforme sua Vida!</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-bone/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Você merece mais do que um simples corte de cabelo. No <strong class="text-bone font-semibold">Espaço Vip Bruna Cabelos</strong>, entendemos os desafios capilares que afetam sua confiança. Descubra um salão onde a beleza é uma jornada pessoal e cada serviço realça o seu brilho interior.
+                    </p>
+
+                    <!-- Botões Principais de Agendamento -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+                        <a href="https://wa.me/5587998167458?text=Ol%C3%A1%20Bruna!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Espa%C3%A7o%20Vip%20Bruna%20Cabelos."
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 gold-btn text-obsidian font-semibold px-7 py-4 rounded-full shadow-gold transition-all text-sm sm:text-base">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Agendar pelo WhatsApp</span>
+                        </a>
+
+                        <a href="https://www.trinks.com" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-obsidian-light hover:bg-white/15 text-bone border border-champagne/40 font-medium px-7 py-4 rounded-full transition-all text-sm sm:text-base">
+                            <i class="far fa-calendar-check text-champagne"></i>
+                            <span>Agendar pelo Trinks</span>
+                        </a>
+                    </div>
+
+                    <!-- Informações Rápidas no Rodapé do Hero -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-bone/70">
+                        <span class="inline-flex items-center gap-1.5">
+                            <i class="fas fa-map-marker-alt text-champagne"></i>
+                            Rua Santina de Oliveira Cavalcante, 413
+                        </span>
+                        <a href="https://www.instagram.com/bruna_rackel_" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-1.5 hover:text-champagne-light transition-colors">
+                            <i class="fab fa-instagram text-champagne"></i>
+                            @bruna_rackel_
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Cartão Editorial de Destaque -->
+                <div class="lg:col-span-5">
+                    <div class="bg-obsidian-light/95 border border-champagne/30 rounded-3xl p-6 sm:p-8 shadow-luxury space-y-6">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-[0.22em] text-champagne font-semibold">Atendimento VIP</span>
+                                <h2 class="font-serif text-2xl text-bone font-semibold mt-0.5">Espaço Vip Bruna Cabelos</h2>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-champagne/15 border border-champagne/30 flex items-center justify-center text-champagne">
+                                <i class="fas fa-crown text-lg"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3.5 text-sm text-bone/80">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-clock text-champagne mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-bone">Horários de Funcionamento</p>
+                                    <p class="text-xs text-bone/70">Terça a Sexta: 09:00 às 18:00 • Sábado: 09:00 às 19:00</p>
+                                    <p class="text-xs text-bone/55">Domingo e Segunda: Fechado</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-credit-card text-champagne mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-bone">Facilidade no Pagamento</p>
+                                    <p class="text-xs text-bone/70">Pix, Cartões de Crédito e Débito, Dinheiro e Link</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-wifi text-champagne mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-bone">Conforto para Toda a Família</p>
+                                    <p class="text-xs text-bone/70">Wi-Fi, TV, atendimento a adultos e crianças</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#servicos"
+                               class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-champagne/30 text-champagne-light text-sm font-medium transition-colors">
+                                <span>Explorar Serviços e Valores</span>
+                                <i class="fas fa-arrow-down text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SEÇÃO DE SERVIÇOS COM FILTRO POR CATEGORIA E WHATSAPP PRONTO      -->
+    <!-- ===================================================================== -->
+    <section id="servicos" class="py-20 sm:py-24 bg-bone">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs uppercase tracking-[0.25em] text-champagne-dark font-bold">Carta de Serviços</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink mt-2">
+                    Cuidados Pensados para o Seu Fio
+                </h2>
+                <p class="text-sm sm:text-base text-muted mt-3">
+                    Todos os 26 serviços do <strong>Espaço Vip Bruna Cabelos</strong> exibidos por padrão. Filtre por categoria, pesquise por nome ou clique em <strong>Agendar</strong> para enviar a mensagem do serviço escolhido direto no WhatsApp.
+                </p>
+            </div>
+
+            <!-- Barra de Busca em Tempo Real -->
+            <div class="max-w-xl mx-auto mb-7">
+                <label for="service-search" class="sr-only">Pesquisar serviço</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-muted pointer-events-none">
+                        <i class="fas fa-search text-sm text-champagne-dark"></i>
+                    </span>
+                    <input id="service-search" type="search" placeholder="Pesquisar serviço (ex.: Botox, Mechas, Corte, Cronograma)..."
+                           class="w-full pl-11 pr-10 py-3 rounded-full bg-sand border border-ink/15 focus:border-champagne focus:bg-white focus:outline-none text-sm text-ink placeholder:text-muted/70 transition-all shadow-sm">
+                    <button id="clear-search-btn" type="button" aria-label="Limpar pesquisa"
+                            class="hidden absolute inset-y-0 right-0 pr-4 items-center text-muted hover:text-ink text-xs">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filtros de Categoria -->
+            <div id="service-filters" class="flex flex-wrap items-center justify-center gap-2.5 mb-12" role="tablist" aria-label="Categorias de serviços">
+                <button type="button" data-filter="todos"
+                        class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-obsidian text-champagne-light shadow-sm transition-all">
+                    Todos os Serviços
+                </button>
+                <button type="button" data-filter="mechas-coloracao"
+                        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-sand text-ink/80 hover:bg-champagne/20 border border-ink/10 transition-all">
+                    Mechas & Coloração
+                </button>
+                <button type="button" data-filter="cortes-escovas"
+                        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-sand text-ink/80 hover:bg-champagne/20 border border-ink/10 transition-all">
+                    Cortes & Escovas
+                </button>
+                <button type="button" data-filter="tratamentos"
+                        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-sand text-ink/80 hover:bg-champagne/20 border border-ink/10 transition-all">
+                    Tratamentos Capilares
+                </button>
+                <button type="button" data-filter="alisamentos"
+                        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-sand text-ink/80 hover:bg-champagne/20 border border-ink/10 transition-all">
+                    Alisamentos
+                </button>
+            </div>
+
+            <!-- Grid de Serviços (Renderizado via JavaScript para filtragem dinâmica) -->
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Preenchido dinamicamente -->
+            </div>
+
+            <!-- Aviso sobre valores e agendamento Trinks -->
+            <div class="mt-12 bg-sand border border-champagne/25 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div class="space-y-1">
+                    <p class="text-sm font-semibold text-ink">
+                        <i class="fas fa-info-circle text-champagne-dark mr-1.5"></i>
+                        Valores estimados sujeitos à avaliação do comprimento, volume e saúde dos fios.
+                    </p>
+                    <p class="text-xs text-muted">
+                        Você também pode consultar horários livres diretamente na agenda online do salão.
+                    </p>
+                </div>
+                <a href="https://www.trinks.com" target="_blank" rel="noopener noreferrer"
+                   class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-obsidian text-champagne-light hover:bg-obsidian-light text-xs sm:text-sm font-semibold transition-colors">
+                    <i class="far fa-calendar-check"></i>
+                    <span>Abrir Agenda Trinks</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. GALERIA DE TRANSFORMAÇÕES (LIGHTBOX AO CLICAR)                     -->
+    <!-- ===================================================================== -->
+    <section id="galeria" class="py-20 sm:py-24 bg-obsidian text-bone">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-champagne font-semibold">Portfólio & Resultados</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-bone mt-2">
+                        Transformações Reais
+                    </h2>
+                    <p class="text-sm sm:text-base text-bone/70 mt-2 max-w-xl">
+                        Clique em qualquer foto para ampliar em tela cheia e ver os detalhes de cada técnica.
+                    </p>
+                </div>
+                <a href="https://www.instagram.com/bruna_rackel_" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 self-start md:self-auto px-5 py-2.5 rounded-full border border-champagne/40 hover:border-champagne text-champagne-light hover:text-white text-xs sm:text-sm font-medium transition-all">
+                    <i class="fab fa-instagram text-base"></i>
+                    <span>Ver mais no @bruna_rackel_</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1: Morena Iluminada em Cachos -->
+                <figure class="gallery-item group relative rounded-2xl overflow-hidden bg-obsidian-light border border-champagne/40 shadow-gold cursor-pointer aspect-[4/5]"
+                        data-src="https://i.postimg.cc/7hpZMjYP/Retrato-de-Mulher-com-Cachos-Dourados.png"
+                        data-title="Morena Iluminada em Cachos"
+                        data-desc="Iluminação em tons mel e caramelo preservando a raiz natural e a definição dos cachos.">
+                    <img src="https://i.postimg.cc/7hpZMjYP/Retrato-de-Mulher-com-Cachos-Dourados.png"
+                         alt="Morena Iluminada em Cachos"
+                         onerror="this.src='https://placehold.co/600x750/1C1A18/C5A059?text=Morena+Iluminada+em+Cachos'"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                    <figcaption class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[11px] uppercase tracking-widest text-champagne font-semibold">Coloração & Cachos</span>
+                        <h3 class="font-serif text-xl text-bone font-semibold mt-0.5">Morena Iluminada em Cachos</h3>
+                        <p class="text-xs text-bone/75 mt-1 line-clamp-2">Iluminação em tons mel e caramelo preservando a raiz natural e a definição dos cachos.</p>
+                        <span class="inline-flex items-center gap-1.5 text-[11px] text-champagne-light mt-2.5 font-medium">
+                            <i class="fas fa-expand-alt"></i> Clique para ampliar
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Item 2: Loiro Perfeito -->
+                <figure class="gallery-item group relative rounded-2xl overflow-hidden bg-obsidian-light border border-champagne/40 shadow-gold cursor-pointer aspect-[4/5]"
+                        data-src="https://i.postimg.cc/QMHNwXBk/Retrato-Cinematografico-em-Estudio.png"
+                        data-title="Loiro Perfeito"
+                        data-desc="Loiro luminoso com tratamento reconstrutor, brilho intenso e saúde dos fios.">
+                    <img src="https://i.postimg.cc/QMHNwXBk/Retrato-Cinematografico-em-Estudio.png"
+                         alt="Loiro Perfeito"
+                         onerror="this.src='https://placehold.co/600x750/1C1A18/C5A059?text=Loiro+Perfeito'"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                    <figcaption class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[11px] uppercase tracking-widest text-champagne font-semibold">Mechas</span>
+                        <h3 class="font-serif text-xl text-bone font-semibold mt-0.5">Loiro Perfeito</h3>
+                        <p class="text-xs text-bone/75 mt-1 line-clamp-2">Loiro luminoso com tratamento reconstrutor, brilho intenso e saúde dos fios.</p>
+                        <span class="inline-flex items-center gap-1.5 text-[11px] text-champagne-light mt-2.5 font-medium">
+                            <i class="fas fa-expand-alt"></i> Clique para ampliar
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <!-- Item 3: Brilho & Maciez Absoluta -->
+                <figure class="gallery-item group relative rounded-2xl overflow-hidden bg-obsidian-light border border-white/10 hover:border-champagne/50 cursor-pointer aspect-[4/5]"
+                        data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80"
+                        data-title="Brilho & Maciez Absoluta"
+                        data-desc="Tratamento de reposição de nutrientes com finalização sedosa e movimento natural.">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80"
+                         alt="Tratamento capilar com brilho e maciez"
+                         onerror="this.src='https://placehold.co/600x750/1C1A18/C5A059?text=Tratamento+VIP'"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                    <figcaption class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[11px] uppercase tracking-widest text-champagne font-semibold">Tratamento</span>
+                        <h3 class="font-serif text-xl text-bone font-semibold mt-0.5">Brilho & Maciez Absoluta</h3>
+                        <p class="text-xs text-bone/75 mt-1 line-clamp-2">Tratamento de reposição de nutrientes com finalização sedosa e movimento natural.</p>
+                        <span class="inline-flex items-center gap-1.5 text-[11px] text-champagne-light mt-2.5 font-medium">
+                            <i class="fas fa-expand-alt"></i> Clique para ampliar
+                        </span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. SOBRE O ESPAÇO VIP BRUNA CABELOS & FACILIDADES                      -->
+    <!-- ===================================================================== -->
+    <section id="sobre" class="py-20 sm:py-24 bg-bone">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.25em] text-champagne-dark font-bold">Sobre o Salão</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-ink leading-tight">
+                        Uma Jornada de Beleza, Confiança e Cuidado
+                    </h2>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed">
+                        Bem-vindo ao <strong class="text-ink">Espaço Vip Bruna Cabelos</strong>. Cada atendimento é conduzido com atenção individualizada, respeitando a história do seu cabelo, o formato do seu rosto e o estilo de vida que você deseja expressar.
+                    </p>
+                    <p class="text-muted text-sm sm:text-base leading-relaxed">
+                        Seja para renovar o visual com iluminação, recuperar a vitalidade dos fios ou preparar-se para um momento especial, nosso compromisso é entregar resultado estético com saúde capilar.
+                    </p>
+
+                    <!-- Grade de Facilidades -->
+                    <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-sand border border-ink/10">
+                            <i class="fas fa-wifi text-champagne-dark text-lg"></i>
+                            <span class="text-sm font-medium text-ink">Wi-Fi Disponível</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-sand border border-ink/10">
+                            <i class="fas fa-tv text-champagne-dark text-lg"></i>
+                            <span class="text-sm font-medium text-ink">TV no Ambiente</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-sand border border-ink/10">
+                            <i class="fas fa-users text-champagne-dark text-lg"></i>
+                            <span class="text-sm font-medium text-ink">Adultos e Crianças</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-sand border border-ink/10">
+                            <i class="fas fa-language text-champagne-dark text-lg"></i>
+                            <span class="text-sm font-medium text-ink">Atendimento em Português</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden shadow-luxury border border-champagne/25">
+                        <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=80"
+                             alt="Cuidado capilar profissional no Espaço Vip Bruna Cabelos"
+                             onerror="this.src='https://placehold.co/1200x900/1C1A18/C5A059?text=Espaco+Vip+Bruna+Cabelos'"
+                             class="w-full h-[420px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. LOCALIZAÇÃO COM GOOGLE MAPS AO FUNDO                               -->
+    <!-- ===================================================================== -->
+    <section id="localizacao" class="py-20 bg-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-xs uppercase tracking-[0.25em] text-champagne-dark font-bold">Visite-nos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ink mt-2">Estamos esperando por você</h2>
+                <p class="text-sm text-muted mt-3">Rua Santina de Oliveira Cavalcante, 413 — Centro, Sertânia - PE</p>
+            </div>
+
+            <div class="relative rounded-3xl overflow-hidden border border-ink/10 shadow-luxury bg-obsidian h-[420px]">
+                <iframe id="gmaps-background-iframe"
+                        title="Mapa do Google Maps do Espaço Vip Bruna Cabelos em Sertânia - PE"
+                        src="https://maps.google.com/maps?q=Rua%20Santina%20de%20Oliveira%20Cavalcante,%20413,%20Centro,%20Sert%C3%A2nia%20-%20PE&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        class="w-full h-full border-0"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <!-- Fallback visual caso o iframe seja bloqueado pelo ambiente -->
+                <div id="gmaps-fallback"
+                     class="hidden absolute inset-0 bg-gradient-to-br from-obsidian via-obsidian-light to-obsidian flex flex-col items-center justify-center p-6 text-center text-bone">
+                    <i class="fas fa-map-marked-alt text-3xl text-champagne mb-3"></i>
+                    <p class="font-serif text-2xl font-semibold">Espaço Vip Bruna Cabelos</p>
+                    <p class="text-sm text-bone/75 mt-1 max-w-md">Rua Santina de Oliveira Cavalcante, 413 — Centro, Sertânia - PE</p>
+                </div>
+
+                <!-- Cartão Editorial Sobreposto ao Mapa -->
+                <div class="relative sm:absolute sm:bottom-5 sm:left-5 z-10 max-w-sm bg-obsidian/92 backdrop-blur-md text-bone border border-champagne/30 rounded-2xl p-5 shadow-luxury">
+                    <span class="text-[10px] uppercase tracking-[0.22em] text-champagne font-semibold">Localização</span>
+                    <h3 class="font-serif text-xl font-semibold mt-0.5">Espaço Vip Bruna Cabelos</h3>
+                    <p class="text-xs text-bone/80 mt-1">Rua Santina de Oliveira Cavalcante, 413 — Centro, Sertânia - PE</p>
+                    <p class="text-[11px] text-bone/65 mt-2">Ter–Sex: 09h–18h • Sáb: 09h–19h</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="https://maps.google.com/?q=Rua+Santina+de+Oliveira+Cavalcante,+413,+Centro,+Sert%C3%A2nia+-+PE"
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-obsidian text-champagne-light text-sm font-semibold">
+                    <i class="fas fa-map-marker-alt"></i> Abrir no Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. POLÍTICAS DE AGENDAMENTO, CANCELAMENTO, REMARCAÇÃO E PAGAMENTOS    -->
+    <!-- ===================================================================== -->
+    <section id="politicas" class="py-16 bg-bone">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="text-xs uppercase tracking-[0.25em] text-champagne-dark font-bold">Informações</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ink mt-2">Agendamento e pagamentos</h2>
+            <p class="text-sm text-muted mt-4 leading-relaxed">
+                Para confirmar valores e horários, entre em contato pelo WhatsApp.
+                Os preços indicados como “a partir de” podem variar conforme comprimento,
+                volume e avaliação dos fios. Aceitamos Pix, cartões de crédito e débito e dinheiro.
+                Cancelamentos com menos de 24 horas de antecedência da data marcada não têm reembolso,
+                e em caso de remarcação é cobrada uma taxa de 50%.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. RODAPÉ                                                             -->
+    <!-- ===================================================================== -->
+    <footer class="bg-obsidian text-bone py-10 border-t border-champagne/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="font-serif text-2xl">Espaço Vip</p>
+                <p class="text-[10px] uppercase tracking-[0.28em] text-champagne">Bruna Cabelos</p>
+            </div>
+            <p class="text-xs text-bone/60">© <span id="current-year"></span> Espaço Vip Bruna Cabelos. Todos os direitos reservados.</p>
+            <a href="https://wa.me/5587998167458" target="_blank" rel="noopener noreferrer"
+               class="text-champagne-light hover:text-white text-sm"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- 9. MODAL LIGHTBOX DA GALERIA                                          -->
+    <!-- ===================================================================== -->
+    <div id="lightbox-modal" class="hidden fixed inset-0 z-[100] bg-black/95 items-center justify-center p-4">
+        <button id="lightbox-close" type="button" aria-label="Fechar imagem"
+                class="absolute top-5 right-5 text-white text-3xl hover:text-champagne">&times;</button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightbox-img" src="" alt="" class="max-h-[72vh] w-auto max-w-full mx-auto rounded-xl object-contain">
+            <h3 id="lightbox-title" class="font-serif text-2xl text-white mt-4"></h3>
+            <p id="lightbox-desc" class="text-sm text-white/70 mt-2"></p>
+            <a id="lightbox-wa-btn" href="#" target="_blank" rel="noopener noreferrer"
+               class="inline-flex mt-5 items-center gap-2 gold-btn text-obsidian font-semibold px-6 py-3 rounded-full">
+                <i class="fab fa-whatsapp"></i> Consultar pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+    (() => {
+        const PHONE = "5587998167458";
+        const TRINKS = "https://www.trinks.com";
+        const services = [
+            ["Acidificação Kpro","tratamentos","Tratamentos Capilares","R$ 100,00","1h","Tratamento de 3 passos."],
+            ["Botox","tratamentos","Tratamentos Capilares","R$ 200,00","2h","Botox capilar."],
+            ["Camuflagem de Cabelos Brancos","mechas-coloracao","Mechas & Coloração","R$ 150,00","1h","Técnica rápida para disfarçar os fios brancos sem cobertura total. Pode ser localizada ou em todo o cabelo."],
+            ["Cauterização a Frio","tratamentos","Tratamentos Capilares","R$ 150,00","45min","Cauterização a frio em 6 passos."],
+            ["Corte Feminino","cortes-escovas","Cortes & Escovas","R$ 100,00","30min","Inclui higienização e secagem."],
+            ["Cristalização","tratamentos","Tratamentos Capilares","R$ 100,00","2h",""],
+            ["Cromoterapia","tratamentos","Tratamentos Capilares","R$ 150,00","1h","Aplicação de feixes de luz coloridos diretamente no couro cabeludo."],
+            ["Cronograma Kpro (4 sessões)","tratamentos","Tratamentos Capilares","R$ 400,00","1h","Indicado na descrição original para cabelos ressecados, com progressiva e elásticos."],
+            ["Cronograma Lanza","tratamentos","Tratamentos Capilares","R$ 450,00","1h","Cronograma capilar."],
+            ["Decapagem / Descoloração","mechas-coloracao","Mechas & Coloração","R$ 300,00","2h","Descoloração de todo o cabelo, removendo a cor natural ou coloração."],
+            ["Escova Botox","alisamentos","Alisamentos","R$ 200,00","2h","Botox capilar que alisa e dá brilho aos fios."],
+            ["Escova Definitiva","alisamentos","Alisamentos","R$ 300,00","3h","Alisamento definitivo, com retoque de raiz conforme a necessidade."],
+            ["Escova e Prancha","cortes-escovas","Cortes & Escovas","A partir de R$ 50,00","1h","Lavagem, escova e prancha."],
+            ["Escova Modelada","cortes-escovas","Cortes & Escovas","R$ 50,00","45min",""],
+            ["Hidratação Wella","tratamentos","Tratamentos Capilares","R$ 70,00","1h","Hidratação Wella."],
+            ["Iluminado","mechas-coloracao","Mechas & Coloração","A partir de R$ 600,00","3h","Mechas iluminadas."],
+            ["Luzes Touca","mechas-coloracao","Mechas & Coloração","A partir de R$ 300,00","3h 20min","Luzes feitas na touca."],
+            ["Mechas Blond","mechas-coloracao","Mechas & Coloração","A partir de R$ 500,00","5h","Mechas blond."],
+            ["Mechas Invertidas","mechas-coloracao","Mechas & Coloração","A partir de R$ 600,00","1h 30min","Técnica para escurecer cabelos claros ou disfarçar grisalhos com aspecto natural."],
+            ["Selagem","alisamentos","Alisamentos","A partir de R$ 250,00","3h","Redução de frizz e volume."],
+            ["Cauterização Francesa","tratamentos","Tratamentos Capilares","A partir de R$ 150,00","1h","Disponível em versões de 6 e 7 passos."],
+            ["Coloração Dicolore","mechas-coloracao","Mechas & Coloração","R$ 150,00","1h","Inclui hidratação e escova."],
+            ["Combo Progressiva + Pré-Química + Corte","alisamentos","Alisamentos","A partir de R$ 260,00","3h 20min","O valor depende do tamanho e volume do cabelo."],
+            ["Corte","cortes-escovas","Cortes & Escovas","R$ 40,00","40min",""],
+            ["Progressiva Masculina","alisamentos","Alisamentos","R$ 80,00","2h",""],
+            ["Teste de Mecha","mechas-coloracao","Mechas & Coloração","R$ 30,00","40min","Avaliação para verificar se o cabelo suporta a química."]
+        ].map(([title,category,categoryLabel,price,duration,description]) => ({title,category,categoryLabel,price,duration,description}));
+
+        let activeFilter = "todos";
+        const normalize = value => (value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+
+        function renderServices() {
+            const grid = document.getElementById("services-grid");
+            const query = normalize(document.getElementById("service-search")?.value || "");
+            const filtered = services.filter(s =>
+                (activeFilter === "todos" || s.category === activeFilter) &&
+                normalize([s.title,s.categoryLabel,s.price,s.duration,s.description].join(" ")).includes(query)
+            );
+
+            if (!filtered.length) {
+                grid.innerHTML = `<div class="col-span-full text-center p-10 bg-sand rounded-2xl text-muted">Nenhum serviço encontrado. Tente outra pesquisa.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(s => {
+                const msg = encodeURIComponent(`Olá Bruna! Gostaria de agendar o serviço ${s.title} (${s.price}).`);
+                const wa = `https://wa.me/${PHONE}?text=${msg}`;
+                return `<article class="service-card bg-sand/70 hover:bg-white rounded-3xl p-6 border border-ink/10 hover:border-champagne/60 shadow-sm hover:shadow-luxury flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] uppercase tracking-wider font-semibold text-champagne-dark bg-champagne/15 px-3 py-1 rounded-full">${s.categoryLabel}</span>
+                            <span class="text-xs text-muted font-medium"><i class="far fa-clock mr-1 text-champagne-dark"></i>${s.duration}</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-ink">${s.title}</h3>
+                        <p class="text-sm font-bold text-champagne-dark mt-1">${s.price}</p>
+                        ${s.description ? `<p class="text-sm text-muted mt-3 leading-relaxed">${s.description}</p>` : ""}
+                    </div>
+                    <div class="pt-5 mt-5 border-t border-ink/10 flex flex-col gap-2">
+                        <a href="${wa}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 gold-btn text-obsidian font-semibold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-gold"><i class="fab fa-whatsapp text-base"></i><span>Agendar</span></a>
+                        <a href="${TRINKS}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1.5 text-xs font-medium text-ink/75 hover:text-ink py-1.5"><i class="far fa-calendar-check text-champagne-dark"></i><span>Ver horários no Trinks</span></a>
+                    </div>
+                </article>`;
+            }).join("");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderServices();
+            document.getElementById("service-search")?.addEventListener("input", renderServices);
+            document.getElementById("clear-search-btn")?.addEventListener("click", () => {
+                document.getElementById("service-search").value = "";
+                renderServices();
+            });
+
+            document.querySelectorAll(".filter-btn").forEach(btn => btn.addEventListener("click", () => {
+                document.querySelectorAll(".filter-btn").forEach(b => {
+                    b.classList.remove("active","bg-obsidian","text-champagne-light","font-semibold","shadow-sm");
+                    b.classList.add("bg-sand","text-ink/80","font-medium","border","border-ink/10");
+                });
+                btn.classList.add("active","bg-obsidian","text-champagne-light","font-semibold","shadow-sm");
+                btn.classList.remove("bg-sand","text-ink/80","font-medium","border","border-ink/10");
+                activeFilter = btn.dataset.filter || "todos";
+                renderServices();
+            }));
+
+            const menuBtn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            const menuIcon = document.getElementById("mobile-menu-icon");
+            menuBtn?.addEventListener("click", () => {
+                const opening = menu.classList.contains("hidden");
+                menu.classList.toggle("hidden", !opening);
+                menuIcon?.classList.toggle("fa-bars", !opening);
+                menuIcon?.classList.toggle("fa-times", opening);
+            });
+            menu?.querySelectorAll(".mobile-nav-link").forEach(link => link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+                menuIcon?.classList.add("fa-bars");
+                menuIcon?.classList.remove("fa-times");
+            }));
+
+            // Horários informados no site: terça a sexta, 9h–18h; sábado, 9h–19h.
+            function updateStatus() {
+                const parts = new Intl.DateTimeFormat("en-US",{timeZone:"America/Recife",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+                const day = ({Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6})[parts.find(p=>p.type==="weekday")?.value] ?? 0;
+                const hour = Number(parts.find(p=>p.type==="hour")?.value || 0);
+                const minute = Number(parts.find(p=>p.type==="minute")?.value || 0);
+                const now = hour*60+minute;
+                const open = (day>=2 && day<=5 && now>=540 && now<1080) || (day===6 && now>=540 && now<1140);
+                const label = open ? "Aberto agora" : "Fechado no momento";
+                ["status-text-desktop","status-text-mobile"].forEach(id => { const el=document.getElementById(id); if(el) el.textContent=label; });
+                ["status-dot-desktop","status-dot-mobile"].forEach(id => { const el=document.getElementById(id); if(el) el.className=`w-2 h-2 rounded-full ${open?"bg-emerald-400":"bg-rose-400"}`; });
+            }
+            updateStatus();
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+
+            const gmapsIframe = document.getElementById("gmaps-background-iframe");
+            const gmapsFallback = document.getElementById("gmaps-fallback");
+            gmapsIframe?.addEventListener("error", () => {
+                gmapsIframe.classList.add("hidden");
+                gmapsFallback?.classList.remove("hidden");
+            });
+
+            const modal = document.getElementById("lightbox-modal");
+            document.querySelectorAll(".gallery-item").forEach(item => item.addEventListener("click", () => {
+                const src=item.dataset.src, title=item.dataset.title, desc=item.dataset.desc;
+                document.getElementById("lightbox-img").src=src;
+                document.getElementById("lightbox-img").alt=title;
+                document.getElementById("lightbox-title").textContent=title;
+                document.getElementById("lightbox-desc").textContent=desc;
+                document.getElementById("lightbox-wa-btn").href=`https://wa.me/${PHONE}?text=${encodeURIComponent("Olá Bruna! Gostaria de saber mais sobre "+title+".")}`;
+                modal.classList.remove("hidden"); modal.classList.add("flex"); document.body.style.overflow="hidden";
+            }));
+            const close = () => { modal.classList.add("hidden"); modal.classList.remove("flex"); document.body.style.overflow=""; };
+            document.getElementById("lightbox-close")?.addEventListener("click",close);
+            modal?.addEventListener("click",e=>{if(e.target===modal)close();});
+            document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});
+        });
+    })();
+    </script>
+</body>
+</html>
